@@ -13,6 +13,15 @@
     --very-dark-blue: hsl(240, 100%, 5%);
 }
 
+.attribution {
+    font-size: 12px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
 body {
     max-width: 1440px;
 }
@@ -20,7 +29,7 @@ body {
 .container {
     display: grid;
     grid-template-areas: "nav nav" "image aside" "tittle-paragraph aside" "footer footer";
-    gap: 6px;
+    gap: 25px;
     margin: 20px;
 }
 
@@ -38,10 +47,13 @@ body {
 
 .aside {
     grid-area: aside;
-    width: 300px;
+    width: 301px;
     background-color: var(--very-dark-blue);
     color: var(--off-white);
-    padding: 30px;
+    padding: 38px;
+    display: flex;
+    flex-direction: column;
+    align-self: baseline;
 }
 
 .footer {
@@ -55,7 +67,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    max-width: 1235px;
+    max-width: 1262px;
     padding: 25px 63px;
     align-items: center;
 }
@@ -70,15 +82,20 @@ body {
 .list li {
     cursor: pointer;
     list-style: none;
+    font-weight: 400;
+}
+
+.list li:hover {
+    color: var(--soft-orange);
 }
 
 .img-flex {
     display: flex;
-    justify-content: center;
+    justify-content: end;
 }
 
 .img-size {
-    width: 825px;
+    width: 862px;
 }
 
 .tittle-paragraph-flex {
@@ -97,7 +114,7 @@ body {
 .paragraph {
     color: var(--dark-grayish-blue);
     font-size: 16px;
-    padding-bottom: 22px;
+    padding-bottom: 30px;
     line-height: 30px;
 }
 
@@ -113,6 +130,10 @@ body {
     border: none;
 }
 
+.button:hover {
+    background-color: var(--very-dark-blue);
+}
+
 
 /*****aside******/
 
@@ -125,13 +146,25 @@ body {
     padding: 12px 0px;
 }
 
+.aside-tittle:hover {
+    color: var(--soft-orange);
+    cursor: pointer;
+}
+
 .aside-paragraph {
-    font-size: 16px;
+    font-size: 15px;
     color: var(--grayish-blue);
+    line-height: 27px;
+}
+
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .aside-padding {
-    padding: 10px;
     padding: 30px 0px;
 }
 
@@ -142,7 +175,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 84px;
+    padding: 70px;
 }
 
 .footer-flex {
@@ -167,6 +200,11 @@ body {
     font-size: 20px;
 }
 
+.footer-tittle:hover {
+    color: var(--soft-orange);
+    cursor: pointer;
+}
+
 .footer-paragraph {
     width: 250px;
     font-size: 16px;
@@ -175,8 +213,14 @@ body {
     line-height: 28px;
 }
 
+.footer-tittle-paragraph {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
 .footer-text-flex {
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    gap: 30px;
 }
